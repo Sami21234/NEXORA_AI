@@ -1,0 +1,165 @@
+text,intent
+hi,greeting
+hello,greeting
+hey there,greeting
+good morning,greeting
+good evening,greeting
+good afternoon,greeting
+hiya,greeting
+hello bot,greeting
+hey assistant,greeting
+yo,greeting
+hi there how are you,greeting
+greetings,greeting
+hey whats up,greeting
+hello there,greeting
+hi how is everything,greeting
+sup,greeting
+hey man,greeting
+hi friend,greeting
+good day,greeting
+hey chatbot,greeting
+hello assistant how are you,greeting
+morning,greeting
+evening,greeting
+hi i just wanted to say hello,greeting
+hey can we talk,greeting
+bye,goodbye
+goodbye,goodbye
+see you later,goodbye
+talk to you later,goodbye
+catch you later,goodbye
+i am leaving now,goodbye
+quit,goodbye
+exit,goodbye
+gotta go bye,goodbye
+see ya,goodbye
+farewell,goodbye
+i have to go now,goodbye
+bye bye,goodbye
+good night,goodbye
+see you tomorrow,goodbye
+i am signing off,goodbye
+this is goodbye for now,goodbye
+ok bye then,goodbye
+alright i am done talking,goodbye
+have to run bye,goodbye
+logging off now,goodbye
+thanks,thanks
+thank you,thanks
+thanks a lot,thanks
+much appreciated,thanks
+thank you so much,thanks
+thanks for the help,thanks
+appreciate it,thanks
+thx,thanks
+cheers,thanks
+thank you very much,thanks
+that was helpful thanks,thanks
+awesome thanks for that,thanks
+thanks so much for your help,thanks
+really appreciate your help,thanks
+thank you for explaining,thanks
+you are a great help thanks,thanks
+thanks buddy,thanks
+great thanks,thanks
+how are you,how_are_you
+how are you doing,how_are_you
+how is it going,how_are_you
+how do you feel,how_are_you
+are you okay,how_are_you
+whats up with you,how_are_you
+how have you been,how_are_you
+how is things,how_are_you
+how is your day going,how_are_you
+you doing okay,how_are_you
+how is everything with you,how_are_you
+are you doing well,how_are_you
+how is your day,how_are_you
+what can you do,what_can_you_do
+what are your features,what_can_you_do
+what do you do,what_can_you_do
+how can you help me,what_can_you_do
+what are your capabilities,what_can_you_do
+tell me what you can help with,what_can_you_do
+list your features,what_can_you_do
+what services do you offer,what_can_you_do
+what kind of things can you help with,what_can_you_do
+what is this chatbot for,what_can_you_do
+what functions do you have,what_can_you_do
+explain what you can do for me,what_can_you_do
+what is your purpose,what_can_you_do
+what tasks can you perform,what_can_you_do
+whats the weather like,weather
+what is the weather today,weather
+is it going to rain,weather
+tell me the weather,weather
+how hot is it outside,weather
+weather forecast please,weather
+is it sunny today,weather
+whats the temperature,weather
+will it rain tomorrow,weather
+how is the weather outside,weather
+is it cold today,weather
+what is the forecast for this week,weather
+is it going to snow,weather
+whats the weather in my city,weather
+tell me a joke,joke
+make me laugh,joke
+say something funny,joke
+do you know any jokes,joke
+got a joke for me,joke
+tell a funny story,joke
+make a joke,joke
+can you be funny,joke
+tell me something hilarious,joke
+i want to laugh tell me a joke,joke
+share a funny joke with me,joke
+got any good jokes,joke
+make me smile with a joke,joke
+who are you,identity
+what is your name,identity
+are you a robot,identity
+are you human,identity
+tell me about yourself,identity
+what are you,identity
+who made you,identity
+are you an ai,identity
+are you a real person,identity
+whats your name,identity
+introduce yourself,identity
+are you a chatbot,identity
+what kind of ai are you,identity
+who built you,identity
+i need help,help
+can you help me,help
+i have a question,help
+help me with something,help
+i am stuck,help
+can you assist me,help
+i need assistance,help
+support please,help
+i need some guidance,help
+can you give me advice,help
+i am confused can you help,help
+i require assistance with an issue,help
+please help me out,help
+i dont know what to do help,help
+asdkjhasd,fallback
+random gibberish text,fallback
+xyzabc123,fallback
+blah blah nonsense,fallback
+what is quantum entanglement in detail,fallback
+explain the stock market to me,fallback
+write me a poem about the ocean,fallback
+what is the capital of france,fallback
+can you summarize the history of rome,fallback
+explain how neural networks work,fallback
+what is the meaning of life,fallback
+give me advice on starting a business,fallback
+how does photosynthesis work,fallback
+write a short story about a dragon,fallback
+explain the theory of relativity,fallback
+what are the benefits of exercise,fallback
+compare python and java programming languages,fallback
+describe the water cycle in detail,fallback
