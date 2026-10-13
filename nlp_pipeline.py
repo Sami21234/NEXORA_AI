@@ -4,7 +4,7 @@ Central NLP pipeline for the Dynamic AI Chatbot.
 Combines three real, independently-verifiable components, each chosen and
 documented honestly rather than oversold:
 
-1. Intent classification -- a TF-IDF + Logistic Regression model we trained
+1. Intent classification -- a TF-IDF + Logistic Regression model trained
    ourselves on data/intents.csv (see models/train_intent_classifier.py).
    Used to answer small talk (greetings, thanks, jokes, etc.) instantly
    without calling the Gemini API, and to log what kind of message each
@@ -26,9 +26,9 @@ once at process startup, not per-request.
 """
 
 import os
-import joblib
-import spacy
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer 
+import joblib       # used to load the intent classifier model
+import spacy        # used for the NER model(NER means Named Entity Recognition, which is a subtask of NLP that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as the names of persons, organizations, locations, expressions of times, quantities, monetary values, percentages, etc.)
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer        # used for the sentiment analysis model 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INTENT_MODEL_PATH = os.path.join(BASE_DIR, "models", "intent_classifier.pkl")
@@ -49,15 +49,15 @@ SMALL_TALK_INTENTS = {
 
 INTENT_CONFIDENCE_THRESHOLD = 0.6
 
-class NLPPipeline:
-    def __init__(self):
+class NLPPipeline:      # This class is the main NLP pipeline for the chatbot. It combines three components: intent classification, named entity recognition (NER), and sentiment analysis. The class is designed to be instantiated once at process startup, as loading the spaCy model can be slow.
+    def __init__(self):     # Initialize the NLP pipeline by loading the required models(here __init__(self) is a constructor method that initializes the NLPPipeline class. It loads the spaCy NER model, the VADER sentiment analyzer, and the intent classifier model from disk.)
         print("Loading NLP pipeline (spaCy NER, VADER, intent classifier)...")
         self.nlp = spacy.load("en_core_web_sm")
         self.sentiment_analyzer = SentimentIntensityAnalyzer()
         self.intent_model = joblib.load(INTENT_MODEL_PATH)
         print("NLP pipeline ready.")
 
-    def analyze_sentiment(self, text: str) -> dict:
+    def analyze_sentiment(self, text: str) -> dict:     # Analyze the sentiment of the input text using VADER.
         """
         Returns VADER's compound score (-1 to +1) plus a simple label.
         Thresholds (+-0.05) are VADER's own documented defaults.
