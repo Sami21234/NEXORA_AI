@@ -96,6 +96,25 @@ def get_recent_history(session_id, limit=6):
         ).fetchall()
     return [{"role": r["role"], "text": r["text"]} for r in reversed(rows)]
 
+def get_full_history(session_id):
+    """
+    Returns every message for a session, in order -- used when the frontend
+    switches to a past conversation and needs to repopulate the whole chat
+    window. (get_recent_history, used internally for Gemini context, stays
+    capped at a small window -- this one is uncapped, for display only.)
+    """
+    with get_connection() as conn:
+        rows = conn.execute(
+            """SELECT id, role, text, timestamp FROM messages
+               WHERE session_id = ?
+               ORDER BY id ASC""",
+            (session_id,),
+        ).fetchall()
+    return [
+        {"id": r["id"], "role": r["role"], "text": r["text"], "timestamp": r["timestamp"]}
+        for r in rows
+    ]
+
 def set_feedback(message_id, feedback_value):
     """feedback_value must be 'up' or 'down'."""
     with get_connection() as conn:

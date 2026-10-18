@@ -40,6 +40,10 @@ def chat():
         print(f"[server] /chat error: {e}")
         return jsonify({"error": "Something went wrong processing your message."}), 500
 
+@app.route("/history/<session_id>")
+def history(session_id):
+    return jsonify(db.get_full_history(session_id))
+
 @app.route("/feedback", methods=["POST"])
 def feedback():
     data = request.get_json(silent=True) or {}
