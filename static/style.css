@@ -233,13 +233,44 @@ body {
 .avatar-user { background: #495057; }
 
 .message {
-    max-width: 72%;
     padding: 11px 15px;
     border-radius: var(--radius-lg);
     line-height: 1.55;
     font-size: 14.5px;
     box-shadow: var(--shadow-soft);
 }
+
+.message-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 72%;
+}
+
+.feedback-row {
+    display: flex;
+    gap: 2px;
+    padding-left: 6px;
+}
+
+.feedback-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 6px;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.feedback-btn:hover:not(:disabled) {
+    background: var(--color-bot-bubble);
+    color: var(--color-text);
+}
+.feedback-btn:disabled { cursor: default; }
+.feedback-btn.active-up { color: #22c55e; }
+.feedback-btn.active-down { color: #ef4444; }
 
 .message-row.user .message {
     background: var(--color-user-bubble);
